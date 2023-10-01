@@ -1,9 +1,8 @@
 import "./index.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const message = ["Learn React", "apply for jobs", "tell your incomes"];
 function App() {
-  // const step = 1;
   const [step, setStep] = useState(1);
   const stepsClick = () => {
     step < 3 ? setStep(step + 1) : setStep(step);
@@ -11,10 +10,6 @@ function App() {
   const stepsPrevious = () => {
     step > 1 ? setStep(step - 1) : setStep(step);
   };
-  // const stepsClick = useEffect(() => {
-  //   setStep(step + 1);
-  //   // stepsClick();
-  // }, []);
   return (
     <div className="steps">
       <div className="numbers">
